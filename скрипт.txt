@@ -39,10 +39,10 @@ sudo rm latest.tar.gz
 
 
 # Налаштування WordPress
-cp /var/www/html/wordpress/wp-config-sample.php /var/www/html/wordpress/wp-config.php
-sudo sed -i -e "s/database_name_here/$DB_NAME/" /var/www/html/wordpress/wp-config.php
-sudo sed -i -e "s/username_here/$DB_USER/" /var/www/html/wordpress/wp-config.php
-sudo sed -i -e "s/password_here/$DB_PASSWORD/" /var/www/html/wordpress/wp-config.php
+cp /var/www/html/wp-config-sample.php /var/www/html/wp-config.php
+sudo sed -i -e "s/database_name_here/$DB_NAME/" /var/www/html/wp-config.php
+sudo sed -i -e "s/username_here/$DB_USER/" /var/www/html/wp-config.php
+sudo sed -i -e "s/password_here/$DB_PASSWORD/" /var/www/html/wp-config.php
 
 # Додаткові налаштування для WordPress (необов'язково)
 # ...
