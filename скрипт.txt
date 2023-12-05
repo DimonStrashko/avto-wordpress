@@ -25,6 +25,7 @@ sudo mysql -e "FLUSH PRIVILEGES;"
 
 # Встановлення PHP та додаткових пакетів для підтримки WordPress
 sudo yum install php8.2 -y
+sudo yum install php8.2-mysqlnd.x86_64 -y
 
 # Перезавантаження HTTP-сервера для внесення змін
 sudo systemctl restart httpd
