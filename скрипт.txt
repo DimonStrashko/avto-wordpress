@@ -33,8 +33,10 @@ sudo systemctl restart httpd
 sudo yum install wget -y
 sudo wget https://wordpress.org/latest.tar.gz
 sudo tar -xvzf latest.tar.gz -C /var/www/html/
-sudo chown -R apache:apache /var/www/html/wordpress
+sudo mv /var/www/html/wordpress/* /var/www/html/
+sudo chown -R apache:apache /var/www/html/
 sudo rm latest.tar.gz
+
 
 # Налаштування WordPress
 cp /var/www/html/wordpress/wp-config-sample.php /var/www/html/wordpress/wp-config.php
