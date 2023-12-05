@@ -13,25 +13,6 @@ sudo yum install mariadb105-server -y
 sudo systemctl start mariadb
 sudo systemctl enable mariadb
 
-# Налаштування бази даних MariaDB (захистити пароль root та видалити анонімних користувачів)
-sudo mysql_secure_installation
-
-# Паролі для MySQL
-ROOT_PASSWORD="your_root_password"
-NEW_PASSWORD="your_new_password"
-
-# Встановлення паролю для користувача root
-sudo mysqladmin -u root password "$ROOT_PASSWORD"
-
-# Використовуємо echo для передачі відповідей під час виконання mysql_secure_installation
-echo -e "\n$NEW_PASSWORD\n$NEW_PASSWORD\n\n\n\n\n" | sudo mysql_secure_installation
-
-# Додаткові налаштування MySQL (за необхідності)
-# ...
-
-# Перезавантаження MySQL
-sudo systemctl restart mysqld
-
 # Створення бази даних та користувача для WordPress
 DB_NAME="wordpressdb"
 DB_USER="wordpressuser"
